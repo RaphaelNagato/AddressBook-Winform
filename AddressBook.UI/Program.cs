@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using AddressBook.Core;
 
 namespace AddressBook.UI
 {
@@ -17,7 +15,13 @@ namespace AddressBook.UI
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Address());
+
+            ServicesConfig.Initialize();
+            IUserRepository userRepo= ServicesConfig.userRepository;
+            IAuthRepository authRepo = ServicesConfig.authRepository;
+
+
+            Application.Run(new Address(userRepo, authRepo));
         }
     }
 }

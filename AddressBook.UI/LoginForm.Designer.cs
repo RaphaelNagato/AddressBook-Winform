@@ -73,6 +73,7 @@ namespace AddressBook.UI
             this.QuitButton.TabIndex = 22;
             this.QuitButton.Text = "Close";
             this.QuitButton.UseVisualStyleBackColor = false;
+            this.QuitButton.Click += new System.EventHandler(this.QuitButton_Click);
             // 
             // RegisterButton
             // 
@@ -87,6 +88,7 @@ namespace AddressBook.UI
             this.RegisterButton.TabIndex = 20;
             this.RegisterButton.Text = "Register";
             this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // pictureBox1
             // 
@@ -182,6 +184,7 @@ namespace AddressBook.UI
             this.LoginButton.TabIndex = 21;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // LoginForm
             // 

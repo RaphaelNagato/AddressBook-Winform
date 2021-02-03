@@ -31,30 +31,31 @@ namespace AddressBook.UI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.UpdateDetails = new System.Windows.Forms.Button();
+            this.UpdateSocials = new System.Windows.Forms.Button();
+            this.UpdatePhone = new System.Windows.Forms.Button();
+            this.ViewAllUsers = new System.Windows.Forms.Button();
+            this.UpdateAddress = new System.Windows.Forms.Button();
             this.ViewDetails = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.LogOutBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.UpdateDetails);
+            this.panel1.Controls.Add(this.UpdateSocials);
+            this.panel1.Controls.Add(this.UpdatePhone);
+            this.panel1.Controls.Add(this.ViewAllUsers);
+            this.panel1.Controls.Add(this.UpdateAddress);
             this.panel1.Controls.Add(this.ViewDetails);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -63,33 +64,65 @@ namespace AddressBook.UI
             this.panel1.Size = new System.Drawing.Size(294, 853);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // UpdateSocials
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(29, 625);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(234, 54);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "View All Users";
-            this.button2.UseVisualStyleBackColor = false;
+            this.UpdateSocials.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.UpdateSocials.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.UpdateSocials.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.UpdateSocials.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UpdateSocials.ForeColor = System.Drawing.Color.White;
+            this.UpdateSocials.Location = new System.Drawing.Point(29, 551);
+            this.UpdateSocials.Name = "UpdateSocials";
+            this.UpdateSocials.Size = new System.Drawing.Size(234, 54);
+            this.UpdateSocials.TabIndex = 25;
+            this.UpdateSocials.Text = "Update Socials";
+            this.UpdateSocials.UseVisualStyleBackColor = false;
+            this.UpdateSocials.Click += new System.EventHandler(this.UpdateSocials_Click);
             // 
-            // UpdateDetails
+            // UpdatePhone
             // 
-            this.UpdateDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.UpdateDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.UpdateDetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.UpdateDetails.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UpdateDetails.ForeColor = System.Drawing.Color.White;
-            this.UpdateDetails.Location = new System.Drawing.Point(29, 513);
-            this.UpdateDetails.Name = "UpdateDetails";
-            this.UpdateDetails.Size = new System.Drawing.Size(234, 54);
-            this.UpdateDetails.TabIndex = 22;
-            this.UpdateDetails.Text = "Update My Details";
-            this.UpdateDetails.UseVisualStyleBackColor = false;
+            this.UpdatePhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.UpdatePhone.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.UpdatePhone.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.UpdatePhone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UpdatePhone.ForeColor = System.Drawing.Color.White;
+            this.UpdatePhone.Location = new System.Drawing.Point(29, 473);
+            this.UpdatePhone.Name = "UpdatePhone";
+            this.UpdatePhone.Size = new System.Drawing.Size(234, 54);
+            this.UpdatePhone.TabIndex = 24;
+            this.UpdatePhone.Text = "Update Phone No";
+            this.UpdatePhone.UseVisualStyleBackColor = false;
+            this.UpdatePhone.Click += new System.EventHandler(this.UpdatePhone_Click);
+            // 
+            // ViewAllUsers
+            // 
+            this.ViewAllUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.ViewAllUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.ViewAllUsers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ViewAllUsers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ViewAllUsers.ForeColor = System.Drawing.Color.White;
+            this.ViewAllUsers.Location = new System.Drawing.Point(29, 638);
+            this.ViewAllUsers.Name = "ViewAllUsers";
+            this.ViewAllUsers.Size = new System.Drawing.Size(234, 54);
+            this.ViewAllUsers.TabIndex = 23;
+            this.ViewAllUsers.Text = "View All Users";
+            this.ViewAllUsers.UseVisualStyleBackColor = false;
+            this.ViewAllUsers.Click += new System.EventHandler(this.ViewAllUsers_Click);
+            // 
+            // UpdateAddress
+            // 
+            this.UpdateAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.UpdateAddress.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.UpdateAddress.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.UpdateAddress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UpdateAddress.ForeColor = System.Drawing.Color.White;
+            this.UpdateAddress.Location = new System.Drawing.Point(29, 386);
+            this.UpdateAddress.Name = "UpdateAddress";
+            this.UpdateAddress.Size = new System.Drawing.Size(234, 54);
+            this.UpdateAddress.TabIndex = 22;
+            this.UpdateAddress.Text = "Update Address";
+            this.UpdateAddress.UseVisualStyleBackColor = false;
+            this.UpdateAddress.Click += new System.EventHandler(this.UpdateAddress_Click);
             // 
             // ViewDetails
             // 
@@ -98,12 +131,13 @@ namespace AddressBook.UI
             this.ViewDetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ViewDetails.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ViewDetails.ForeColor = System.Drawing.Color.White;
-            this.ViewDetails.Location = new System.Drawing.Point(29, 399);
+            this.ViewDetails.Location = new System.Drawing.Point(29, 288);
             this.ViewDetails.Name = "ViewDetails";
             this.ViewDetails.Size = new System.Drawing.Size(234, 54);
             this.ViewDetails.TabIndex = 21;
             this.ViewDetails.Text = "View My Details";
             this.ViewDetails.UseVisualStyleBackColor = false;
+            this.ViewDetails.Click += new System.EventHandler(this.ViewDetails_Click);
             // 
             // panel2
             // 
@@ -139,76 +173,53 @@ namespace AddressBook.UI
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.LogOutBtn);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(294, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(906, 87);
             this.panel3.TabIndex = 1;
             // 
-            // panel4
+            // LogOutBtn
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(294, 87);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(906, 117);
-            this.panel4.TabIndex = 2;
+            this.LogOutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.LogOutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.LogOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LogOutBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LogOutBtn.ForeColor = System.Drawing.Color.White;
+            this.LogOutBtn.Location = new System.Drawing.Point(739, 12);
+            this.LogOutBtn.Name = "LogOutBtn";
+            this.LogOutBtn.Size = new System.Drawing.Size(133, 43);
+            this.LogOutBtn.TabIndex = 22;
+            this.LogOutBtn.Text = "Log out";
+            this.LogOutBtn.UseVisualStyleBackColor = false;
+            this.LogOutBtn.Click += new System.EventHandler(this.LogOutBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 25);
+            this.label1.Location = new System.Drawing.Point(363, 214);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome";
+            this.label1.Size = new System.Drawing.Size(137, 30);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Loading....";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(211, 25);
+            this.label3.Location = new System.Drawing.Point(300, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 32);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Raphael Okeibunor";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(707, 62);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 30);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Role : Admin";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(739, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 43);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Log out";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label3.Size = new System.Drawing.Size(230, 30);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Loading all users...";
             // 
             // AdminDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 853);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -216,14 +227,14 @@ namespace AddressBook.UI
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
+            this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -233,14 +244,14 @@ namespace AddressBook.UI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button UpdateDetails;
+        private System.Windows.Forms.Button ViewAllUsers;
+        private System.Windows.Forms.Button UpdateAddress;
         private System.Windows.Forms.Button ViewDetails;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button LogOutBtn;
+        private System.Windows.Forms.Button UpdateSocials;
+        private System.Windows.Forms.Button UpdatePhone;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
     }
 }

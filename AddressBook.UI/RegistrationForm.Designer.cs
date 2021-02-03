@@ -47,10 +47,8 @@ namespace AddressBook.UI
             this.label6 = new System.Windows.Forms.Label();
             this.MainPhoneBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.UserTypeBox = new System.Windows.Forms.ComboBox();
+            this.RoleBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.OtherPhoneBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.RegisterButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -100,6 +98,7 @@ namespace AddressBook.UI
             this.LoginButton.TabIndex = 20;
             this.LoginButton.Text = "Log In";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // pictureBox1
             // 
@@ -236,45 +235,28 @@ namespace AddressBook.UI
             this.label7.TabIndex = 12;
             this.label7.Text = "*Phone Number (Main) :";
             // 
-            // UserTypeBox
+            // RoleBox
             // 
-            this.UserTypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.UserTypeBox.FormattingEnabled = true;
-            this.UserTypeBox.Items.AddRange(new object[] {
+            this.RoleBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RoleBox.FormattingEnabled = true;
+            this.RoleBox.Items.AddRange(new object[] {
             "User",
             "Admin"});
-            this.UserTypeBox.Location = new System.Drawing.Point(123, 600);
-            this.UserTypeBox.MaxDropDownItems = 2;
-            this.UserTypeBox.Name = "UserTypeBox";
-            this.UserTypeBox.Size = new System.Drawing.Size(439, 38);
-            this.UserTypeBox.TabIndex = 14;
+            this.RoleBox.Location = new System.Drawing.Point(638, 501);
+            this.RoleBox.MaxDropDownItems = 2;
+            this.RoleBox.Name = "RoleBox";
+            this.RoleBox.Size = new System.Drawing.Size(439, 38);
+            this.RoleBox.TabIndex = 14;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label8.Location = new System.Drawing.Point(106, 557);
+            this.label8.Location = new System.Drawing.Point(638, 468);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(135, 30);
             this.label8.TabIndex = 15;
             this.label8.Text = "*User Type";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label9.Location = new System.Drawing.Point(638, 468);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(354, 30);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Phone Number 2 (Optional) :";
-            // 
-            // OtherPhoneBox
-            // 
-            this.OtherPhoneBox.Location = new System.Drawing.Point(638, 501);
-            this.OtherPhoneBox.Name = "OtherPhoneBox";
-            this.OtherPhoneBox.Size = new System.Drawing.Size(439, 37);
-            this.OtherPhoneBox.TabIndex = 17;
             // 
             // label10
             // 
@@ -300,6 +282,7 @@ namespace AddressBook.UI
             this.RegisterButton.TabIndex = 19;
             this.RegisterButton.Text = "Register";
             this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // label11
             // 
@@ -321,10 +304,8 @@ namespace AddressBook.UI
             this.Controls.Add(this.label11);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.OtherPhoneBox);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.UserTypeBox);
+            this.Controls.Add(this.RoleBox);
             this.Controls.Add(this.MainPhoneBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.PasswordBox);
@@ -369,10 +350,8 @@ namespace AddressBook.UI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox MainPhoneBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox UserTypeBox;
+        private System.Windows.Forms.ComboBox RoleBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox OtherPhoneBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button RegisterButton;
         private System.Windows.Forms.Button QuitButton;
