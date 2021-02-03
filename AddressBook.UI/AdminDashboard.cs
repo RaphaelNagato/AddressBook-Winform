@@ -46,9 +46,8 @@ namespace AddressBook.UI
         {
             // show all users
             label1.Hide();
-            label3.Show();
 
-            label3.Text = await _userRepository.GetAllUsers(_userRoleId);
+            richTextBox1.Text = await  _userRepository.GetAllUsers(_userRoleId);
 
 
 
@@ -61,7 +60,7 @@ namespace AddressBook.UI
             {
                 ViewAllUsers.Visible = false;
             }
-            label3.Hide();
+            
         }
 
         private void LogOutBtn_Click(object sender, EventArgs e)
@@ -77,5 +76,6 @@ namespace AddressBook.UI
 
 
         }
+
     }
 }

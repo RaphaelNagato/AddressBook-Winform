@@ -42,7 +42,7 @@ namespace AddressBook.UI
             this.panel3 = new System.Windows.Forms.Panel();
             this.LogOutBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -204,22 +204,20 @@ namespace AddressBook.UI
             this.label1.TabIndex = 2;
             this.label1.Text = "Loading....";
             // 
-            // label3
+            // richTextBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(300, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 27);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Loading all users...";
+            this.richTextBox1.Location = new System.Drawing.Point(381, 267);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(672, 408);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
             // 
             // AdminDashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 853);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -253,6 +251,6 @@ namespace AddressBook.UI
         private System.Windows.Forms.Button UpdateSocials;
         private System.Windows.Forms.Button UpdatePhone;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
