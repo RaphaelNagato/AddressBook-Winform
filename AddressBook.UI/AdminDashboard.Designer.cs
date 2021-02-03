@@ -207,9 +207,10 @@ namespace AddressBook.UI
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(300, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(230, 30);
+            this.label3.Size = new System.Drawing.Size(181, 27);
             this.label3.TabIndex = 3;
             this.label3.Text = "Loading all users...";
             // 
