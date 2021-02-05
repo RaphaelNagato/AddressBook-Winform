@@ -45,7 +45,6 @@ namespace AddressBook.UI
         private async void ViewAllUsers_Click(object sender, EventArgs e)
         {
             // show all users
-            label1.Hide();
 
             richTextBox1.Text = await  _userRepository.GetAllUsers(_userRoleId);
 
@@ -70,11 +69,11 @@ namespace AddressBook.UI
 
         private async void ViewDetails_Click(object sender, EventArgs e)
         {
+
             var user = await _userRepository.GetUser(_email);
 
-            label1.Text = user.ToString();
 
-
+            richTextBox1.Text = user.ToString();
         }
 
     }
